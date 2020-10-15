@@ -6,16 +6,16 @@ package waitImpl;
  * producer and consumer with only one volumn
  * note : the use of wait must be inside a synchronized block
  */
-public class TwoThreadModel {
+public class SingleConsumerSingleProducerModel {
     final Object o1,o2;
     boolean cRunning,pRunning;
 
     public static void main(String[] args) {
-        TwoThreadModel m = new TwoThreadModel();
+        SingleConsumerSingleProducerModel m = new SingleConsumerSingleProducerModel();
         m.run();
     }
 
-    public TwoThreadModel() {
+    public SingleConsumerSingleProducerModel() {
         o1 = new Object();
         o2 = new Object();
         pRunning = true;
